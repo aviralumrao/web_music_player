@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --pri: #000000;
+  --sec: #1a1a1a;
+  --ter: #333333;
+  --for: #4d4d4d;
+  --fiv: #666666;
+}
+
+body {
+  background-color: var(--pri);
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.invert {
+  filter: invert(100%);
+}
+
+.left {
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.right {
+  width: 75vw;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--sec);
+  border-radius: 10px;
+  gap: 10px;
+  padding: 10px 15px;
+}
+
+.logo {
+  height: 35px;
+  padding: 10px 0;
+}
+
+.logo>img {
+  height: inherit;
+  width: inherit;
+  object-fit: contain;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navigation>li {
+  list-style: none;
+  height: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+  border-radius: 10px;
+  padding: 10px 4px;
+}
+
+.navigation li:hover {
+  background-color: var(--ter);
+}
+
+li img {
+  height: inherit;
+  width: inherit;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.library {
+  min-height: 70vh;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heading img {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+
+.plus {
+  height: 15px;
+  width: 15px;
+  object-fit: contain;
+  cursor: pointer;
+  border-radius: 500px;
+  padding: 8px;
+}
+
+.plus:hover {
+  background-color: var(--ter);
+}
+
+.library .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tile {
+  background-color: var(--ter);
+  border-radius: 8px;
+  padding: 2px 15px 15px;
+}
+
+.tile>h3 {
+  font-size: 15px;
+}
+
+.tile>p {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.tile .button {
+  background-color: white;
+  color: var(--pri);
+  border: none;
+  padding: 0px 8px;
+  margin-top: 20px;
+  border-radius: 500px;
+  height: 30px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+.quicklinks{
+  color: var(--fiv);
+  font-size: 12px;
+}
+.quicklinks a{
+    text-decoration: none;
+}
