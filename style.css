@@ -14,6 +14,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.flex {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 .invert {
   filter: invert(100%);
 }
@@ -26,7 +32,7 @@ body {
 }
 
 .right {
-  width: 75vw;
+  width: 25vw;
 }
 
 .column {
@@ -36,6 +42,7 @@ body {
   border-radius: 10px;
   gap: 10px;
   padding: 10px 15px;
+  justify-content: flex-start;
 }
 
 .logo {
@@ -153,11 +160,154 @@ li img {
   align-items: center;
   cursor: pointer;
   font-weight: 600;
-}
-.quicklinks{
-  color: var(--fiv);
   font-size: 12px;
 }
-.quicklinks a{
-    text-decoration: none;
+
+.quicklinks {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 10px;
+  gap: 15px;
+}
+
+.quicklinks a {
+  color: var(--fiv);
+  text-decoration: none;
+}
+
+.cookieslink {
+  color: grey;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.middle {
+  background-color: var(--sec);
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 50vw;
+}
+
+.middle_top {
+  padding: 0px 10px;
+}
+
+.mid_heading {
+  font-size: 20px;
+  padding: 0px 10px;
+  margin: 40px 0px 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile img {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+  border-radius: 500px;
+}
+
+.profile p {
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+
+.favourites {
+  display: flex;
+  gap: 10px;
+  padding: 0px 10px;
+}
+
+.fav_card {
+  width: 50%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background-color: var(--ter);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.fav_card img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.fav_card:hover {
+  cursor: pointer;
+  background-color: var(--for);
+}
+
+.recommendations {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.rec_card {
+  display: flex;
+  gap: 5px;
+  min-width: 180px;
+  width: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.rec_card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.rec_card .name {
+  padding: 0px 8px;
+  font-size: 15px;
+}
+
+.rec_card:hover {
+  cursor: pointer;
+  background-color: var(--ter);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.rec_card_image {
+  position: relative;
+}
+
+.play-button {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+
+  /* Center horizontally (-50%) and push down out of view (100px)
+  transform: translateX(-50%) translateY(100px); */
+
+  width: 80px;
+  height: 80px;
+
+  /* The Animation Transition */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* Cubic-bezier adds a slight "bounce" effect */
+}
+
+.rec_card:hover .play-button {
+  transform: translateX(-50%) translateY(0);
+  /* Move to original position */
+  opacity: 1;
 }
