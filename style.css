@@ -252,22 +252,24 @@ li img {
 }
 
 .recommendations {
-  display: flex;
+  width: 100%;
+  margin: auto;
   flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
-  overflow: hidden;
 }
 
 .rec_card {
   display: flex;
   gap: 5px;
-  min-width: 180px;
-  width: 180px;
   border-radius: 8px;
   overflow: hidden;
   flex-direction: column;
   justify-content: flex-start;
   padding: 10px;
+  flex: 1 1 calc(25% - 10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .rec_card img {
@@ -275,9 +277,9 @@ li img {
   border-radius: 8px;
 }
 
-.rec_card .name {
+.rec_card_name {
   padding: 0px 8px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .rec_card:hover {
@@ -288,6 +290,8 @@ li img {
 
 .rec_card_image {
   position: relative;
+  height: inherit;
+  width: inherit;
 }
 
 .play-button {
@@ -315,7 +319,7 @@ li img {
   }
 
   70% {
-    transform: translate(-50%, -50%) scale(1.2);
+    transform: translate(-50%, -50%) scale(1.1);
     opacity: 1;
   }
 
